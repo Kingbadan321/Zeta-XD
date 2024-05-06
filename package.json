@@ -1,6 +1,6 @@
 {
   "name": "Zeta-XD",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Zeta-XD simple multi device WhatsApp Bot.",
   "main": "./index.js",
   "type": "commonjs",
@@ -14,6 +14,7 @@
   "keywords": [
     "bot",
     "ai",
+    "Ezra",
     "Zeta",
   ],
   "author": "Zeta-XD",
