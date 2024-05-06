@@ -19,12 +19,12 @@
      "AUDIO_DATA": {
       "description": "audio data , title;artist;image url",
       "required": "false",
-      "value": "𝐳𝐞𝐭𝐚𝐚𝐡𝐡 ; 𝐞𝐳𝐫𝐚𝐚𝐡𝐡-𝐱𝐝 ; https://i.imgur.com/Ou56ggv.jpeg"
+      "value": "ᴢᴇᴛᴀ-xᴅ ; ʙᴀᴅᴀɴ ꜱᴇʀ ; https://i.imgur.com/Ou56ggv.jpeg"
      },
      "CAPTION": {
       "description": "enter your media caption",
       "required": "false",
-      "value": "_𝐳𝐞𝐭𝐚𝐚𝐡𝐡👀🦋!_"
+      "value": "*~𝐳𝐞𝐭𝐚𝐚𝐡𝐡👀🦋!~*"
     },
        "STICKER_DATA": {
       "description": "Sticker pack name, eg : 𝐙𝐞𝐭𝐚-𝐗𝐃;𝐁𝐚𝐝𝐚𝐧 𝐬𝐞𝐫⚇",
@@ -34,7 +34,7 @@
        "BOT_INFO": {
       "description": "Bot info : botname;ownername;imageurl - image or video",
       "required": "false",
-      "value": "𝐄𝐳𝐫𝐚𝐡𝐡-𝐗𝐃;𝐙𝐞𝐭𝐚𝐡𝐡;https://i.imgur.com/nAkM1zV.mp4"
+      "value": "𝚭͓ᴇ͛ᴛ͛ᴀ͛-𝚾͓ᴅ͛ 🎽;ʙᴀᴅᴀɴ ꜱᴇʀ;https://i.imgur.com/nAkM1zV.mp4"
     },
      "ALWAYS_ONLINE": {
       "description": "Bot online online : true",
@@ -42,7 +42,7 @@
       "value": "false"
     },
     "SUDO": {
-      "description": "sudo numbers with country code seperate with , for multiple numbers",
+      "description": "sudo numbers with country code seperate with , for multiple numbers eg:- 919747257996,919539612761,etc...",
       "required": false
     },
     "WORK_TYPE": {
