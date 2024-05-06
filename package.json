@@ -9,21 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kingbadan321/Zeta-XD"
+    "url": "git+https://github.com/Zeta-XD/ezraa.git"
   },
   "keywords": [
     "bot",
     "ai",
     "Ezra",
     "Zeta",
+    "sparkyapi"
   ],
   "author": "Zeta-XD",
-  "developer": "Badan Ser",
+  "developer": "Zeta",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/Kingbadan321/Zeta-XD/issues"
+    "url": "https://github.com/Zeta-XD/ezraa/issues"
   },
-  "homepage": "https://github.com/Kingbadan321/Zeta-XD#readme",
+  "homepage": "https://github.com/Zeta-XD/ezraa#readme",
   "dependencies": {
     "@whiskeysockets/baileys": "^6.6.0",
     "@adiwajshing/keyed-db": "^0.2.4",
