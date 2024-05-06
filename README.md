@@ -3,7 +3,7 @@
 Zeta-XD - Simple whatsapp Multi Device bot based on 
 Xasena 
 
-``` Full Open Source```
+``` Made With 💗 ```
 
 ***
 
