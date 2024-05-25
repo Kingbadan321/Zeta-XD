@@ -50,6 +50,7 @@ async function Abhiy() {
     browser: Browsers.macOS("Desktop"),
     downloadHistory: false,
     syncFullHistory: false,
+    generateHighQualityLinkPreview: true,
     version,
   });
   store.bind(conn.ev);
