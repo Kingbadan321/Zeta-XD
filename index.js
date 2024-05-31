@@ -143,7 +143,7 @@ async function Abhiy() {
                 ? text_msg.split("").shift()
                 : ",";
             }
-            if (msg.body.startsWith(config.HANDLERS) && msg.body.includes(command.pattern)) {
+            if (msg.body.startsWith(config.HANDLERS) && msg.body.includes(command.pattern.replace(/[^a-zA-Z0-9-|+]/g, ''))) {
               var match;
               try {
                 match = msg.body.replace(config.HANDLERS).trim();
