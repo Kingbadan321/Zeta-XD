@@ -27,7 +27,7 @@ Xasena
 
 2. Now Deploy
     <br>
-<a href='https://heroku.com/deploy?template=https://github.com/Kingbadan321/Zeta-XD' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=heroku&logoColor=violet'/></a>
+<a href='https://dashboard.heroku.com/new?template=https://github.com/Kingbadan321/Zeta-XD&amp;button-url=https://github.com/Kingbadan321&amp;version=1.3.1&amp;auther=BadanSer' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=heroku&logoColor=violet'/></a>
 
 
 ***
