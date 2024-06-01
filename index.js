@@ -3,6 +3,7 @@ const {
   useMultiFileAuthState,
   Browsers,
   makeInMemoryStore,
+  fetchLatestBaileysVersion,
 } = require("@whiskeysockets/baileys");
 const fs = require("fs");
 const { serialize } = require("./lib/serialize");
@@ -40,6 +41,7 @@ async function Abhiy() {
   "./lib/session" ,
     pino({ level: "silent" })
   );
+  const { version } = await fetchLatestBaileysVersion();
   let conn = makeWASocket({
     logger: pino({ level: "silent" }),
     auth: state,
@@ -48,6 +50,8 @@ async function Abhiy() {
     browser: Browsers.macOS("Desktop"),
     downloadHistory: false,
     syncFullHistory: false,
+    generateHighQualityLinkPreview: true,
+    version,
   });
   store.bind(conn.ev);
   //store.readFromFile("./lib/afiya.json");
