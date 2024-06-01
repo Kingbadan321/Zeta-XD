@@ -63,8 +63,8 @@ async function Abhiy() {
   conn.ev.on("connection.update", async (s) => {
     const { connection, lastDisconnect } = s;
     if (connection === "connecting") {
-      console.log("Zeta");
-      console.log("𝗥𝗘𝗔𝗗𝗜𝗡𝗚 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗜𝗗🪫");
+      console.log("zeta");
+      console.log("𝗥𝗘𝗔𝗗𝗜𝗡𝗚 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗜𝗗 🪫");
     }
 
     if (
@@ -79,8 +79,8 @@ async function Abhiy() {
 
     if (connection === "open") {
     
-      console.log("𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬 𝗟𝗢𝗚𝗜𝗡𝗘𝗗 𝗜𝗡𝗧𝗢 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣🧩");
-      console.log("𝗜𝗡𝗦𝗧𝗔𝗟𝗟𝗜𝗡𝗚 𝗣𝗟𝗨𝗚𝗜𝗡𝗦🛠️");
+      console.log("𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬 𝗟𝗢𝗚𝗜𝗡𝗘𝗗 𝗜𝗡𝗧𝗢 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 🧩");
+      console.log("𝗜𝗡𝗦𝗧𝗔𝗟𝗟𝗜𝗡𝗚 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 🛠️");
 
       let plugins = await PluginDB.findAll();
       plugins.map(async (plugin) => {
@@ -96,14 +96,14 @@ async function Abhiy() {
           }
         }
       });
-      console.log(" 𝗭𝗲𝘁𝗮-𝗫𝗗 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬🔋");
+      console.log("𝗣𝗟𝗨𝗚𝗜𝗡𝗦 𝗜𝗡𝗦𝗧𝗔𝗟𝗟𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬 🎏");
 
       fs.readdirSync("./plugins").forEach((plugin) => {
         if (path.extname(plugin).toLowerCase() == ".js") {
           require("./plugins/" + plugin);
         }
       });
-      console.log(" 𝗭𝗲𝘁𝗮-𝗫𝗗 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬🔋");
+      console.log("𝗭𝗲𝘁𝗮-𝗫𝗗 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬🔋");
       let readMore = String.fromCharCode(8206).repeat(4001);
       let str = `𝐙𝐄𝐓𝐀-𝐗𝐃 𝐒𝐓𝐀𝐑𝐓𝐄𝐃 ${readMore}\n\n\n𝘝𝘌𝘙𝘚𝘐𝘖𝘕   : *${require("./package.json").version }* \n𝘗𝘓𝘜𝘎𝘐𝘕𝘚  : *${events.commands.length}* \n𝘔𝘖𝘋𝘌  : *${config.WORK_TYPE}* \n𝘗𝘙𝘌𝘍𝘐𝘟  : *${config.HANDLERS}*`;
       conn.sendMessage(conn.user.id, { text: str });
@@ -118,11 +118,6 @@ async function Abhiy() {
           let ms = m.messages[0];
           let msg = await serialize(JSON.parse(JSON.stringify(ms)), conn);
           if (!msg.message) return;
-          msg.prefix = new RegExp(config.HANDLERS).test(text_msg)
-                ? text_msg.split("").shift()
-                : ",";
-                const regex = new RegExp("^(" + msg.prefix.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + ")(\\s)(.+)");
-                if (msg.body.startsWith(msg.prefix) && msg.body[1] === " ") msg.body = msg.body.replace(regex, '$1$3');
           let text_msg = msg.body;
           if (text_msg && config.LOGS)
             console.log(
@@ -144,6 +139,9 @@ async function Abhiy() {
             let comman;
             if (text_msg) {
               comman = text_msg.trim().split(/ +/)[0];
+              msg.prefix = new RegExp(config.HANDLERS).test(text_msg)
+                ? text_msg.split("").shift()
+                : ",";
             }
             if (command.pattern && command.pattern.test(comman)) {
               var match;
