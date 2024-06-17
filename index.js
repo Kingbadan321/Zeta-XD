@@ -143,6 +143,7 @@ async function Abhiy() {
                 ? text_msg.split("").shift()
                 : ",";
             }
+            config.ALWAYS_ONLINE ? await conn.sendPresenceUpdate("available", m.jid) : await conn.sendPresenceUpdate("unavailable", m.jid);
             if (command.pattern && command.pattern.test(comman)) {
               var match;
               try {
