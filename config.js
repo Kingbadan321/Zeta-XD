@@ -20,6 +20,7 @@ module.exports = {
   BOT_INFO: process.env.BOT_INFO || "𝐄𝐳𝐫𝐚𝐡𝐡-𝐗𝐃;𝐙𝐞𝐭𝐚𝐡𝐡;https://i.imgur.com/nAkM1zV.mp4",
   AUDIO_DATA: process.env.AUDIO_DATA || "𝐳𝐞𝐭𝐚𝐚𝐡𝐡;𝐞𝐳𝐫𝐚𝐚𝐡𝐡-𝐱𝐝;https://i.imgur.com/Ou56ggv.jpeg",
   ALWAYS_ONLINE: toBool(process.env.ALWAYS_ONLINE) || false,
+  STATUS_VIEW : process.env.STATUS_VIEW || "false",
   CAPTION: process.env.CAPTION || "𝐳𝐞𝐭𝐚𝐚𝐡𝐡👁️!",
   WORK_TYPE: process.env.WORK_TYPE || "private",
   DATABASE_URL: DATABASE_URL,
