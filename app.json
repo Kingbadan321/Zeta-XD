@@ -41,6 +41,11 @@
       "required": "false",
       "value": "false"
     },
+    "STATUS_VIEW": {
+      "description": "status views, true or false",
+      "required": true,
+      "value": "false"
+    },
     "SUDO": {
       "description": "sudo numbers with country code seperate with , for multiple numbers eg:- 919747257996,919539612761,etc...",
       "required": false
