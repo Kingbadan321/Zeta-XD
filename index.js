@@ -144,6 +144,11 @@ async function Abhiy() {
                 : ",";
             }
             config.ALWAYS_ONLINE ? await conn.sendPresenceUpdate("available", m.jid) : await conn.sendPresenceUpdate("unavailable", m.jid);
+            if (config.STATUS_VIEW) {
+							if (config.STATUS_VIEW.toLowerCase() == 'true') {
+								await conn.readMessages([m.key]);
+							} 
+            }
             if (command.pattern && command.pattern.test(comman)) {
               var match;
               try {
