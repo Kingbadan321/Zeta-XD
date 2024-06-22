@@ -1,1 +1,353 @@
-const _0x3ec2ae=_0xfb8a;(function(_0x599700,_0x223566){const _0x542080=_0xfb8a,_0x337519=_0x599700();while(!![]){try{const _0xda6dde=parseInt(_0x542080(0x138))/0x1+parseInt(_0x542080(0x149))/0x2*(-parseInt(_0x542080(0x19d))/0x3)+-parseInt(_0x542080(0x15f))/0x4+-parseInt(_0x542080(0x157))/0x5*(-parseInt(_0x542080(0x15b))/0x6)+-parseInt(_0x542080(0x189))/0x7+-parseInt(_0x542080(0x1a3))/0x8+parseInt(_0x542080(0x178))/0x9;if(_0xda6dde===_0x223566)break;else _0x337519['push'](_0x337519['shift']());}catch(_0x475de1){_0x337519['push'](_0x337519['shift']());}}}(_0x3711,0x93e85));const {command,isPrivate,getBuffer,getJson,isUrl,extractUrlFromMessage}=require(_0x3ec2ae(0x17a)),fetch=require(_0x3ec2ae(0x196)),ytdl=require(_0x3ec2ae(0x183)),{CAPTION}=require(_0x3ec2ae(0x185)),axios=require(_0x3ec2ae(0x150)),cheerio=require(_0x3ec2ae(0x17b)),X=require(_0x3ec2ae(0x185)),{prepareWAMessageMedia}=require(_0x3ec2ae(0x161));command({'pattern':_0x3ec2ae(0x147),'fromMe':isPrivate,'desc':_0x3ec2ae(0x14c),'type':'downloader'},async(_0x118cc2,_0x3aead2)=>{const _0x47bf99=_0x3ec2ae;if(process['cwd']()!=='/root/zeta')return _0x118cc2[_0x47bf99(0x159)](_0x47bf99(0x198));if(!_0x3aead2)return await _0x118cc2['sendMessage'](_0x47bf99(0x14b));var _0x4447b9=await axios[_0x47bf99(0x16d)](_0x47bf99(0x139)+_0x3aead2),_0xe074a6=_0x4447b9['data'];await _0x118cc2[_0x47bf99(0x137)][_0x47bf99(0x18b)](_0x118cc2[_0x47bf99(0x184)],{'text':_0x47bf99(0x151)+_0xe074a6[_0x47bf99(0x19f)][_0x47bf99(0x191)]+'_*'},{'quoted':_0x118cc2});const _0x13f879=await(await fetch(''+_0xe074a6[_0x47bf99(0x19f)][_0x47bf99(0x190)]))[_0x47bf99(0x15c)]();await _0x118cc2[_0x47bf99(0x137)]['sendMessage'](_0x118cc2['jid'],{'audio':_0x13f879,'mimetype':'audio/mpeg'},{'quoted':_0x118cc2});}),command({'pattern':_0x3ec2ae(0x14d),'fromMe':isPrivate,'desc':'Yt\x20Video\x20Downloader','type':_0x3ec2ae(0x171)},async(_0x310a96,_0x469ae6)=>{const _0xb698d1=_0x3ec2ae;if(process[_0xb698d1(0x18c)]()!=='/root/zeta')return _0x310a96['reply']('use\x20og\x20version\x20myra\x20https://github.com/Kingbadan321/Zeta-XD');if(!_0x469ae6)return await _0x310a96[_0xb698d1(0x18b)](_0xb698d1(0x179));let {result:_0x3ec7bb}=await getJson(_0xb698d1(0x197)+_0x469ae6);return await _0x310a96[_0xb698d1(0x137)][_0xb698d1(0x18b)](_0x310a96['jid'],{'text':_0xb698d1(0x151)+_0x3ec7bb[_0xb698d1(0x191)]+'_*'},{'quoted':_0x310a96}),await _0x310a96['sendFromUrl'](_0x3ec7bb['url'],{'caption':'*'+_0x3ec7bb['title']+'*'},{'quoted':_0x310a96});}),command({'pattern':'yta','fromMe':isPrivate,'desc':'YouTube\x20song\x20Downloader','type':_0x3ec2ae(0x171)},async(_0x14e08a,_0x5b025b,_0x4b7905)=>{const _0x130fd7=_0x3ec2ae;if(process[_0x130fd7(0x18c)]()!==_0x130fd7(0x1a1))return _0x14e08a[_0x130fd7(0x159)]('use\x20og\x20version\x20myra\x20https://github.com/Kingbadan321/Zeta-XD');if(!isUrl(_0x5b025b))return await _0x14e08a[_0x130fd7(0x159)](_0x130fd7(0x152));let _0x111c16=await ytmp3(_0x5b025b);await _0x14e08a[_0x130fd7(0x137)][_0x130fd7(0x18b)](_0x14e08a[_0x130fd7(0x184)],{'audio':_0x111c16[_0x130fd7(0x15c)],'mimetype':_0x130fd7(0x16f)},{'quoted':_0x14e08a},_0x130fd7(0x17c));});async function ytmp3(_0x5509ea){const _0x38181f=_0x3ec2ae;try{const {videoDetails:_0x3ebcd6}=await ytdl['getInfo'](_0x5509ea,{'lang':'id'}),_0x4919b7=ytdl(_0x5509ea,{'filter':_0x38181f(0x17e),'quality':_0x38181f(0x167)}),_0x1fc401=[];_0x4919b7['on']('data',_0x20c26f=>{const _0x4e498d=_0x38181f;_0x1fc401[_0x4e498d(0x144)](_0x20c26f);}),await new Promise((_0x3650fa,_0x30e585)=>{const _0x2571b9=_0x38181f;_0x4919b7['on'](_0x2571b9(0x194),_0x3650fa),_0x4919b7['on'](_0x2571b9(0x165),_0x30e585);});const _0x3856d7=Buffer[_0x38181f(0x170)](_0x1fc401);return{'meta':{'title':_0x3ebcd6['title'],'channel':_0x3ebcd6[_0x38181f(0x16e)][_0x38181f(0x164)],'seconds':_0x3ebcd6[_0x38181f(0x181)],'description':_0x3ebcd6['description'],'image':_0x3ebcd6[_0x38181f(0x156)][_0x38181f(0x19c)](-0x1)[0x0]['url']},'buffer':_0x3856d7,'size':_0x3856d7[_0x38181f(0x162)]};}catch(_0x25e5e4){throw _0x25e5e4;}}function _0x3711(){const _0x275a31=['*_Need\x20a\x20imgur/graph\x20Link_*','*_Need\x20Terabox\x20Link_*\x0a*Nb:-\x20Please\x20provide\x20link\x20less\x20than\x20100MB*','slice','3mVtUFh','CAPTION','data','json','/root/zeta','ytv','8422776OgTnwW','ownerChannelName','a#downloadButton','videoandaudio','_*\x0a\x0a*size\x20:\x20','client','854589SvKbBD','https://api-viper-x.koyeb.app/api/song?name=','*\x0a\x0a𝐄𝐙𝐑𝐀-𝐗𝐃','https://raganork-network.vercel.app/api/xvideos/download?url=','https://api.github.com/repos/','load','mediafire','publishDate','/zipball','Downloads\x20&\x20uploads\x20media\x20from\x20raw\x20URL','*_Need\x20A\x20Mediafire\x20Url_*','*_Need\x20Pinterest\x20Url_*','push','text','HEAD','song','url','2190178OtCUpp','direct_link','*_Need\x20Song\x20Name\x20Or\x20Url_*','Song\x20Downloader','video','split','link','axios','*_Downloading\x20','*_Need\x20YouTube\x20Url_*','\x20minute','Spotify\x20Song\x20Downloader','terabox\x20Downloader','thumbnails','305JWQYKS','attr','reply','YouTube\x20Video\x20Downloader','15954baoyHu','buffer','https://api.maher-zubair.tech/download/spotify?url=','mime','4287144tQAHTQ','quoted','@whiskeysockets/baileys','length','Repository\x20Downloader','name','error','Mediafire\x20Downloader','highestaudio','https://cute-tan-gorilla-yoke.cyclic.app/imagine?text=','floor','ai\x20image\x20generator','reply_message','sendFromUrl','get','author','audio/mpeg','concat','downloader','videoDetails','href','upload','qualityLabel','0\x20B','join','35851041XNwbSY','*_Need\x20a\x20Video\x20Name_*','../lib','cheerio','audio','formats','audioonly','dalle','\x20hour','lengthSeconds','spotify','ytdl-core','jid','../config','chooseFormat','getInfo','*_Need\x20A\x20Text_*\x0a*eg:-\x20.dalle\x20a\x20modified\x20gtr\x20in\x20garage*','8222802bFEVoA','*_Downloading_*','sendMessage','cwd','headers','pinterest','Pinterest\x20Downloader','downloadUrl','title','*_Need\x20A\x20Repo\x20Url_*','size','end','replace','node-fetch','https://api-aswin-sparky.koyeb.app/api/downloader/yt_video?search=','use\x20og\x20version\x20myra\x20https://github.com/Kingbadan321/Zeta-XD','*_Need\x20Spotify\x20Url_*'];_0x3711=function(){return _0x275a31;};return _0x3711();};command({'pattern':_0x3ec2ae(0x1a2),'fromMe':isPrivate,'desc':_0x3ec2ae(0x15a),'type':_0x3ec2ae(0x171)},async(_0x556704,_0xce2e8f)=>{const _0x570e60=_0x3ec2ae;if(process[_0x570e60(0x18c)]()!=='/root/zeta')return _0x556704['reply'](_0x570e60(0x198));if(!isUrl(_0xce2e8f))return await _0x556704['reply']('*_Need\x20YouTube\x20Url_*');let _0x31cb17=await ytmp4(_0xce2e8f,'134');await _0x556704[_0x570e60(0x16c)](_0x31cb17['videoUrl'],{'caption':X[_0x570e60(0x19e)]},{'quoted':_0x556704});});function _0xfb8a(_0x4a51ac,_0x2d41c5){const _0x37110b=_0x3711();return _0xfb8a=function(_0xfb8ae4,_0x5f0779){_0xfb8ae4=_0xfb8ae4-0x136;let _0x373884=_0x37110b[_0xfb8ae4];return _0x373884;},_0xfb8a(_0x4a51ac,_0x2d41c5);}function formatDuration(_0x317cb2){const _0x490deb=_0x3ec2ae,_0x573a83=Math[_0x490deb(0x169)](_0x317cb2/0xe10),_0x2bbf0e=Math[_0x490deb(0x169)](_0x317cb2%0xe10/0x3c),_0x167fa0=_0x317cb2%0x3c,_0x39f062=[];return _0x573a83>0x0&&_0x39f062[_0x490deb(0x144)](_0x573a83+_0x490deb(0x180)),_0x2bbf0e>0x0&&_0x39f062[_0x490deb(0x144)](_0x2bbf0e+_0x490deb(0x153)),_0x167fa0>0x0&&_0x39f062[_0x490deb(0x144)](_0x167fa0+'\x20second'),_0x39f062[_0x490deb(0x177)]('\x20');}function formatBytes(_0x50c61f){const _0x5cd204=_0x3ec2ae;if(_0x50c61f===0x0)return _0x5cd204(0x176);const _0x571973=['B','KB','MB','GB','TB'],_0x13026d=Math[_0x5cd204(0x169)](Math['log'](_0x50c61f)/Math['log'](0x400));return(_0x50c61f/0x400**_0x13026d)['toFixed'](0x2)+'\x20'+_0x571973[_0x13026d];}async function ytmp4(_0x2b3c08,_0x4debcc=0x86){const _0x3185ae=_0x3ec2ae;try{const _0x2340a7=await ytdl[_0x3185ae(0x187)](_0x2b3c08,{'lang':'id'}),_0x2dbbfc=ytdl[_0x3185ae(0x186)](_0x2340a7[_0x3185ae(0x17d)],{'format':_0x4debcc,'filter':_0x3185ae(0x1a6)});let _0x264a88=await fetch(_0x2dbbfc['url'],{'method':_0x3185ae(0x146)}),_0x5f3548=_0x264a88[_0x3185ae(0x18d)][_0x3185ae(0x16d)]('content-length'),_0x28d091=parseInt(_0x5f3548);return{'title':_0x2340a7[_0x3185ae(0x172)][_0x3185ae(0x191)],'thumb':_0x2340a7[_0x3185ae(0x172)][_0x3185ae(0x156)][_0x3185ae(0x19c)](-0x1)[0x0],'date':_0x2340a7[_0x3185ae(0x172)][_0x3185ae(0x13f)],'duration':formatDuration(_0x2340a7[_0x3185ae(0x172)]['lengthSeconds']),'channel':_0x2340a7[_0x3185ae(0x172)][_0x3185ae(0x1a4)],'quality':_0x2dbbfc[_0x3185ae(0x175)],'contentLength':formatBytes(_0x28d091),'description':_0x2340a7[_0x3185ae(0x172)]['description'],'videoUrl':_0x2dbbfc['url']};}catch(_0x318a85){throw _0x318a85;}}command({'pattern':_0x3ec2ae(0x182),'fromMe':isPrivate,'desc':_0x3ec2ae(0x154),'type':_0x3ec2ae(0x171)},async(_0x4a2122,_0x4e3640,_0x34c883)=>{const _0x9cd923=_0x3ec2ae;if(process[_0x9cd923(0x18c)]()!=='/root/zeta')return _0x4a2122[_0x9cd923(0x159)](_0x9cd923(0x198));_0x4e3640=_0x4e3640||_0x4a2122['reply_message'][_0x9cd923(0x145)];if(!_0x4e3640)return await _0x4a2122['reply'](_0x9cd923(0x199));let _0x74101d=(await getJson(_0x9cd923(0x15d)+_0x4e3640))['result']['url'];await _0x4a2122['sendFromUrl'](_0x74101d,{'quoted':_0x4a2122});}),command({'pattern':_0x3ec2ae(0x18e),'fromMe':isPrivate,'desc':_0x3ec2ae(0x18f),'type':_0x3ec2ae(0x171)},async(_0x32ad55,_0x1ab140)=>{const _0x2d6a8f=_0x3ec2ae;if(process['cwd']()!==_0x2d6a8f(0x1a1))return _0x32ad55[_0x2d6a8f(0x159)](_0x2d6a8f(0x198));if(!isUrl(_0x1ab140))return await _0x32ad55[_0x2d6a8f(0x18b)](_0x2d6a8f(0x143));var {result:_0x1bbe07}=await getJson('https://api.lokiser.xyz/api/pinterestdl?link='+_0x1ab140);await _0x32ad55['sendFromUrl'](_0x1bbe07['LokiXer'][_0x2d6a8f(0x148)],{'caption':X[_0x2d6a8f(0x19e)]},{'quoted':_0x32ad55});}),command({'pattern':'gitdl','fromMe':isPrivate,'desc':_0x3ec2ae(0x163),'type':_0x3ec2ae(0x171)},async(_0x557b31,_0x2dac4d,_0x357221)=>{const _0x47c915=_0x3ec2ae;if(process[_0x47c915(0x18c)]()!==_0x47c915(0x1a1))return _0x557b31[_0x47c915(0x159)](_0x47c915(0x198));if(!isUrl(_0x2dac4d))return await _0x557b31[_0x47c915(0x159)](_0x47c915(0x192));let _0x3f5efd=_0x2dac4d[_0x47c915(0x14e)]('/')[0x3],_0x28a71c=_0x2dac4d[_0x47c915(0x14e)]('/')[0x4],_0x2bbcc9=_0x47c915(0x13c)+_0x3f5efd+'/'+_0x28a71c+_0x47c915(0x140);await _0x557b31[_0x47c915(0x159)](_0x47c915(0x18a)),await _0x557b31[_0x47c915(0x137)]['sendMessage'](_0x557b31['jid'],{'document':{'url':_0x2bbcc9},'fileName':_0x28a71c,'mimetype':'application/zip'},{'quoted':_0x557b31});}),command({'pattern':'tbox','fromMe':isPrivate,'desc':_0x3ec2ae(0x155),'type':'downloader'},async(_0x4cc380,_0x2ec3c3)=>{const _0xf333d2=_0x3ec2ae;if(process[_0xf333d2(0x18c)]()!==_0xf333d2(0x1a1))return _0x4cc380[_0xf333d2(0x159)]('use\x20og\x20version\x20myra\x20https://github.com/Kingbadan321/Zeta-XD');_0x2ec3c3=_0x2ec3c3||_0x4cc380[_0xf333d2(0x16b)]['text'];if(!_0x2ec3c3)return _0x4cc380[_0xf333d2(0x159)](_0xf333d2(0x19b));let _0xd693d6=await getJson('https://terabox-app.vercel.app/api?data='+_0x2ec3c3);return await _0x4cc380[_0xf333d2(0x16c)](_0xd693d6[_0xf333d2(0x14a)],{'caption':X[_0xf333d2(0x19e)]});}),command({'pattern':'xvd','fromMe':!![],'desc':'xv\x20Downloader','type':_0x3ec2ae(0x171)},async(_0x5904a3,_0x42fb3c)=>{const _0x329a0b=_0x3ec2ae;if(process[_0x329a0b(0x18c)]()!==_0x329a0b(0x1a1))return _0x5904a3['reply'](_0x329a0b(0x198));if(!_0x42fb3c)return await _0x5904a3[_0x329a0b(0x18b)]('*_Need\x20a\x20xv\x20Link_*');var _0x4647f7=await fetch(_0x329a0b(0x13b)+_0x42fb3c),_0x3667f8=await _0x4647f7[_0x329a0b(0x1a0)]();await _0x5904a3[_0x329a0b(0x137)][_0x329a0b(0x18b)](_0x5904a3['jid'],{'video':{'url':_0x3667f8['url']},'caption':𝐗[_0x329a0b(0x19e)]},{'quoted':_0x5904a3});}),command({'pattern':_0x3ec2ae(0x174),'fromMe':isPrivate,'desc':_0x3ec2ae(0x141),'type':_0x3ec2ae(0x171)},async(_0x378d49,_0x4baba9)=>{const _0x52839a=_0x3ec2ae;if(process[_0x52839a(0x18c)]()!==_0x52839a(0x1a1))return _0x378d49[_0x52839a(0x159)](_0x52839a(0x198));_0x4baba9=_0x4baba9||m[_0x52839a(0x160)][_0x52839a(0x145)];if(!_0x4baba9)return _0x378d49[_0x52839a(0x159)](_0x52839a(0x19a));return await _0x378d49[_0x52839a(0x16c)](_0x4baba9,{'caption':X['CAPTION']},{'quoted':_0x378d49});}),command({'pattern':_0x3ec2ae(0x13e),'fromMe':isPrivate,'desc':_0x3ec2ae(0x166),'type':_0x3ec2ae(0x171)},async(_0x13d585,_0x2f2ad9)=>{const _0x5917f8=_0x3ec2ae;if(process[_0x5917f8(0x18c)]()!=='/root/zeta')return _0x13d585[_0x5917f8(0x159)]('use\x20og\x20version\x20myra\x20https://github.com/Kingbadan321/Zeta-XD');if(!_0x2f2ad9)return await _0x13d585[_0x5917f8(0x18b)](_0x5917f8(0x142));const _0x599e45=async _0xfc753a=>{const _0x543956=_0x5917f8,_0x4eb70e=await axios[_0x543956(0x16d)](_0xfc753a),_0x22cd7d=cheerio[_0x543956(0x13d)](_0x4eb70e[_0x543956(0x19f)]),_0x551e91=[],_0x2c7cff=_0x22cd7d(_0x543956(0x1a5))[_0x543956(0x158)](_0x543956(0x173)),_0x285d18=_0x22cd7d(_0x543956(0x1a5))[_0x543956(0x145)]()[_0x543956(0x195)]('Download','')[_0x543956(0x195)]('(','')[_0x543956(0x195)](')','')[_0x543956(0x195)]('\x0a','')[_0x543956(0x195)]('\x0a','')['replace']('\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20',''),_0x1b52a7=_0x2c7cff['split']('/'),_0x33fbff=_0x1b52a7[0x5];return mime=_0x33fbff[_0x543956(0x14e)]('.'),mime=mime[0x1],_0x551e91['push']({'name':_0x33fbff,'mime':mime,'size':_0x285d18,'link':_0x2c7cff}),_0x551e91;};var _0x5aad13=await _0x599e45(''+_0x2f2ad9);await _0x13d585[_0x5917f8(0x137)]['sendMessage'](_0x13d585['jid'],{'text':_0x5917f8(0x151)+_0x5aad13[0x0]['name']+_0x5917f8(0x136)+_0x5aad13[0x0][_0x5917f8(0x193)]+_0x5917f8(0x13a)},{'quoted':_0x13d585}),await _0x13d585['client'][_0x5917f8(0x18b)](_0x13d585['jid'],{'document':{'url':_0x5aad13[0x0][_0x5917f8(0x14f)]},'fileName':_0x5aad13[0x0]['name'],'mimetype':_0x5aad13[0x0][_0x5917f8(0x15e)]},{'quoted':_0x13d585});}),command({'pattern':_0x3ec2ae(0x17f),'fromMe':isPrivate,'desc':_0x3ec2ae(0x16a),'type':'downloader'},async(_0x5494a1,_0x1d4a73,_0x34ad48)=>{const _0x3c3c77=_0x3ec2ae;if(process[_0x3c3c77(0x18c)]()!=='/root/zeta')return _0x5494a1[_0x3c3c77(0x159)](_0x3c3c77(0x198));_0x1d4a73=_0x1d4a73||_0x5494a1['reply_message'][_0x3c3c77(0x145)];if(!_0x1d4a73)return await _0x5494a1['reply'](_0x3c3c77(0x188));await _0x5494a1[_0x3c3c77(0x16c)](_0x3c3c77(0x168)+_0x1d4a73,{'caption':'*zetahh👀*'});});
+const { command , isPrivate , getBuffer, getJson, isUrl, extractUrlFromMessage } = require("../lib");
+const fetch = require("node-fetch");
+const ytdl = require("ytdl-core")
+const { CAPTION } = require("../config");
+const axios = require("axios");
+const cheerio = require('cheerio')
+const X = require("../config");
+const { prepareWAMessageMedia } = require('@whiskeysockets/baileys')
+const Spotify = require('spotifydl-core').default
+const spotify = new Spotify({
+    clientId: 'acc6302297e040aeb6e4ac1fbdfd62c3',
+    clientSecret: '0e8439a1280a43aba9a5bc0a16f3f009',
+})
+
+
+command(
+    {
+        pattern: "song",
+        fromMe: isPrivate,
+        desc: "Song Downloader",
+        type: "downloader",
+    },
+    async (message, match) => {
+    if(process.cwd() !== "/root/zeta") return message.reply("use og version myra https://github.com/Kingbadan321/Zeta-XD");
+        if (!match) return await message.sendMessage("*_Need Song Name Or Url_*");
+var res = await axios.get(`https://api-viper-x.koyeb.app/api/song?name=${match}`)
+var song = res.data
+await message.client.sendMessage(message.jid, { text: `*_Downloading ${song.data.title}_*` },{ quoted: message})
+const zeta = await (await fetch(`${song.data.downloadUrl}`)).buffer()
+await message.client.sendMessage(message.jid, { audio :zeta,  mimetype:"audio/mpeg" }, {quoted: message })
+    }
+    );
+
+// ZETA BRO //
+
+command(
+    {
+        pattern: "video",
+        fromMe: isPrivate,
+        desc: "Yt Video Downloader",
+        type: "downloader",
+    },
+    async (message, match) => {
+    if(process.cwd() !== "/root/zeta") return message.reply("use og version myra https://github.com/Kingbadan321/Zeta-XD");
+        if (!match) return await message.sendMessage("*_Need a Video Name_*");
+let {result} = await getJson(`https://api-aswin-sparky.koyeb.app/api/downloader/yt_video?search=${match}`);
+await message.client.sendMessage(message.jid, { text: `*_Downloading ${result.title}_*` },{ quoted: message})
+return await message.sendFromUrl(result.url, { caption: `*${result.title}*` }, {quoted: message })
+    });
+
+// Zeta-XD 
+
+command(
+    {
+        pattern: "yta",
+        fromMe: isPrivate,
+        desc: "YouTube song Downloader",
+        type: "downloader",
+    },
+    async (message, match, client) => {
+    if(process.cwd() !== "/root/zeta") return message.reply("use og version myra https://github.com/Kingbadan321/Zeta-XD");
+        if (!isUrl(match)) return await message.reply("*_Need YouTube Url_*");
+let Ytd = await ytmp3(match);
+await message.client.sendMessage(message.jid, {audio: Ytd.buffer, mimetype: "audio/mpeg"}, { quoted: message }, "audio");
+});
+
+async function ytmp3(url) {
+    try {
+        const {
+            videoDetails
+        } = await ytdl.getInfo(url, {
+            lang: "id"
+        });
+
+        const stream = ytdl(url, {
+            filter: "audioonly",
+            quality: "highestaudio"
+        });
+        const chunks = [];
+
+        stream.on("data", (chunk) => {
+            chunks.push(chunk);
+        });
+
+        await new Promise((resolve, reject) => {
+            stream.on("end", resolve);
+            stream.on("error", reject);
+        });
+
+        const buffer = Buffer.concat(chunks);
+
+        return {
+            meta: {
+                title: videoDetails.title,
+                channel: videoDetails.author.name,
+                seconds: videoDetails.lengthSeconds,
+                description: videoDetails.description,
+                image: videoDetails.thumbnails.slice(-1)[0].url,
+            },
+            buffer: buffer,
+            size: buffer.length,
+        };
+    } catch (error) {
+        throw error;
+    }
+};
+
+// ZETA BRO //
+
+command(
+    {
+        pattern: "ytv",
+        fromMe: isPrivate,
+        desc: "YouTube Video Downloader",
+        type: "downloader",
+    },
+    async (message, match) => {
+    if(process.cwd() !== "/root/zeta") return message.reply("use og version myra https://github.com/Kingbadan321/Zeta-XD");
+        if (!isUrl(match)) return await message.reply("*_Need YouTube Url_*");
+let Ytd = await ytmp4(match, "134");
+await message.sendFromUrl(Ytd.videoUrl, { caption: (X.CAPTION) }, {quoted: message })
+});
+
+function formatDuration(seconds) {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const remainingSeconds = seconds % 60;
+
+    const formattedDuration = [];
+
+    if (hours > 0) {
+        formattedDuration.push(`${hours} hour`);
+    }
+
+    if (minutes > 0) {
+        formattedDuration.push(`${minutes} minute`);
+    }
+
+    if (remainingSeconds > 0) {
+        formattedDuration.push(`${remainingSeconds} second`);
+    }
+
+    return formattedDuration.join(' ');
+}
+
+function formatBytes(bytes) {
+    if (bytes === 0) {
+        return '0 B';
+    }
+    const sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(1024));
+    return `${(bytes / 1024 ** i).toFixed(2)} ${sizes[i]}`;
+}
+
+async function ytmp4(query, quality = 134) {
+    try {
+        const videoInfo = await ytdl.getInfo(query, {
+            lang: 'id'
+        });
+        const format = ytdl.chooseFormat(videoInfo.formats, {
+            format: quality,
+            filter: 'videoandaudio'
+        })
+        let response = await fetch(format.url, {
+            method: 'HEAD'
+        });
+        let contentLength = response.headers.get('content-length');
+        let fileSizeInBytes = parseInt(contentLength);
+        return {
+            title: videoInfo.videoDetails.title,
+            thumb: videoInfo.videoDetails.thumbnails.slice(-1)[0],
+            date: videoInfo.videoDetails.publishDate,
+            duration: formatDuration(videoInfo.videoDetails.lengthSeconds),
+            channel: videoInfo.videoDetails.ownerChannelName,
+            quality: format.qualityLabel,
+            contentLength: formatBytes(fileSizeInBytes),
+            description: videoInfo.videoDetails.description,
+            videoUrl: format.url
+        }
+    } catch (error) {
+        throw error
+    }
+}
+
+// Zeta-XD 
+
+async function spdl(ur)
+{
+let res = await axios.get(ur);
+await client.sendMessage(message.jid, { audio: { url: res.data.result.url }, mimetype: "audio/mpeg" });
+}
+
+command(
+  {
+    pattern: "spotify",
+    fromMe: isPrivate,
+    desc: "download spotify song/playlist",
+    type: "downloader",
+  },
+  async (message, match, m, client) => {
+  try{
+  if (!match) return await message.reply("*provide a spotify track/playlist/album url*");
+  if (!match.includes("spotify")) return await message.reply("*provide a valid spotify url*");
+if (match.includes("https://open.spotify.com/playlist/")) {
+let { tracks } = await spotify.getPlaylist(match);
+let op = []
+tracks.map(async (u) => {
+op.push(`https://api.maher-zubair.tech/download/spotify?url=https://open.spotify.com/track/${u}`)
+})
+
+for (let i = 0; i < op.length; i++) {
+await spdl(op[i])
+}
+} else if (match.includes("https://open.spotify.com/album/")) {
+let { tracks } = await spotify.getAlbum(match);
+let op = []
+tracks.map(async (u) => {
+op.push(`https://api.maher-zubair.tech/download/spotify?url=https://open.spotify.com/track/${u}`)
+})
+
+for (let i = 0; i < op.length; i++) {
+await spdl(op[i])
+}
+} else {
+await spdl(`https://api.maher-zubair.tech/download/spotify?url=https://open.spotify.com/track/${match}`)
+}
+}catch (error) {
+return await message.reply("*download failed*")
+}
+})
+
+
+command(
+    {
+        pattern: "pinterest",
+        fromMe: isPrivate,
+        desc: "Pinterest Downloader",
+        type: "downloader",
+    },
+    async (message, match) => {
+    if(process.cwd() !== "/root/zeta") return message.reply("use og version myra https://github.com/Kingbadan321/Zeta-XD");
+        if (!isUrl(match)) return await message.sendMessage("*_Need Pinterest Url_*");
+var {result} = await getJson(`https://api.lokiser.xyz/api/pinterestdl?link=${match}`)
+await message.sendFromUrl(result.LokiXer.url,{ caption: (X.CAPTION) }, {quoted: message})
+    }
+    );
+
+command(
+    {
+        pattern: "gitdl",
+        fromMe: isPrivate,
+        desc: "Repository Downloader",
+        type: "downloader",
+    },
+    async (message, match, client) => {
+    if(process.cwd() !== "/root/zeta") return message.reply("use og version myra https://github.com/Kingbadan321/Zeta-XD");
+if (!isUrl(match)) return await message.reply("*_Need A Repo Url_*")
+let user = match.split("/")[3];
+let repo = match.split("/")[4];
+let url = `https://api.github.com/repos/${user}/${repo}/zipball`;
+await message.reply("*_Downloading_*")
+
+await message.client.sendMessage(message.jid,{ document :{ url: url }, fileName: repo , mimetype: "application/zip"}, {quoted: message });
+})
+
+command(
+    {
+        pattern: "tbox",
+        fromMe: isPrivate,
+        desc: "terabox Downloader",
+        type: "downloader",
+    },
+    async (message, match) => {
+    if(process.cwd() !== "/root/zeta") return message.reply("use og version myra https://github.com/Kingbadan321/Zeta-XD");
+    	match = match || message.reply_message.text
+   if (!match)return message.reply(`*_Need Terabox Link_*\n*Nb:- Please provide link less than 100MB*`)
+let zeta = await getJson(`https://terabox-app.vercel.app/api?data=${match}`);
+return await message.sendFromUrl(zeta.direct_link, { caption: (X.CAPTION)})
+});
+
+command(
+    {
+        pattern: "xvd",
+        fromMe: true,
+        desc: "xv Downloader",
+        type: "downloader",
+    },
+    async (message, match) => {
+    if(process.cwd() !== "/root/zeta") return message.reply("use og version myra https://github.com/Kingbadan321/Zeta-XD");
+        if (!match) return await message.sendMessage("*_Need a xv Link_*");
+var sex = await fetch(`https://raganork-network.vercel.app/api/xvideos/download?url=${match}`);
+        var fek = await sex.json();
+
+        await message.client.sendMessage(message.jid,{video:{ url: fek.url }, caption: (𝐗.CAPTION)}, {quoted : message})
+    }
+    );
+    
+command(
+    {
+        pattern: "upload",
+        fromMe: isPrivate,
+        desc: "Downloads & uploads media from raw URL",
+        type: "downloader",
+    },
+    async (message, match) => {
+    if(process.cwd() !== "/root/zeta") return message.reply("use og version myra https://github.com/Kingbadan321/Zeta-XD");
+match = match || m.quoted.text;
+if (!match)return message.reply(`*_Need a imgur/graph Link_*`)
+return await message.sendFromUrl(match, { caption: (X.CAPTION) }, {quoted: message})
+});
+
+command(
+    {
+        pattern: "mediafire",
+        fromMe: isPrivate,
+        desc: "Mediafire Downloader",
+        type: "downloader",
+    },
+    async (message, match) => {
+    if(process.cwd() !== "/root/zeta") return message.reply("use og version myra https://github.com/Kingbadan321/Zeta-XD");
+        if (!match) return await message.sendMessage("*_Need A Mediafire Url_*");
+const mediafiredownload = async (url) => {
+const res = await axios.get(url) 
+const $ = cheerio.load(res.data)
+const response = []
+const link = $('a#downloadButton').attr('href')
+const size = $('a#downloadButton').text().replace('Download', '').replace('(', '').replace(')', '').replace('\n', '').replace('\n', '').replace('                         ', '')
+const seplit = link.split('/')
+const name = seplit[5]
+mime = name.split('.')
+mime = mime[1]
+response.push({ name, mime, size, link })
+return response
+}
+var zeta = await mediafiredownload(`${match}`)
+await message.client.sendMessage(message.jid, { text: `*_Downloading ${zeta[0]['name']}_*\n\n*size : ${zeta[0]['size']}*\n` },{ quoted: message});
+await message.client.sendMessage(message.jid, { document :{ url: zeta[0]['link'] }, fileName: zeta[0]['name'] , mimetype: zeta[0]['mime'] }, {quoted: message })
+}
+);
+
+command(
+    {
+        pattern: "dalle",
+        fromMe: isPrivate,
+        desc: "ai image generator",
+        type: "downloader",
+    },
+    async (message, match, m) => {
+    if(process.cwd() !== "/root/zeta") return message.reply("use og version myra https://github.com/Kingbadan321/Zeta-XD");
+match = match || message.reply_message.text;
+	if(!match) return await message.reply(`*_Need A Text_*\n*eg:- .dalle a modified gtr in garage*`);
+await message.sendFromUrl(`https://cute-tan-gorilla-yoke.cyclic.app/imagine?text=${match}`, {caption: (X.CAPTION)})
+});
